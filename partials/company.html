@@ -1,0 +1,26 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <p><lable>最大可购买：</lable>{{incomme}}</p>
+        <table class="table">
+            <thead>
+            <th>机构编码</th>
+            <th>公司名称</th>
+            <th>公司业务类型</th>
+            <th>公司状态</th>
+            <th>备注</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cy in companies | orderBy:orderProp">
+                    <td>{{cy.company_id}}</td>
+                    <td>{{cy.company_name}}</td>
+                    <td>{{cy.compbusin_type | busEn}}</td>
+                    <td>{{cy.company_status | comStatusEn}}</td>
+                    <td>{{cy.remark}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
